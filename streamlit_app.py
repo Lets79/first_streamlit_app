@@ -46,7 +46,7 @@ else:
     # output it on the screen as a table
     streamlit.dataframe(fruityvice_normalized)
     
-except Urlerror as e
+except Urlerror as e:
 streamlist.error()
 
 streamlit.stop()
