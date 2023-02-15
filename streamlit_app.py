@@ -25,7 +25,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-#streamlit.text(fruityvice_response.json()) -Show on screen
+#streamlit.text(fruityvice_response.json()) - Removed - Show on screen
 
 #Take the json version of the response and normalize it
 fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
@@ -42,9 +42,10 @@ import snowflake.connector
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
-my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+#my_cur.execute("SELECT CURRENT_USER(), CURRENT_ACCOUNT(), CURRENT_REGION()")
+my_cur.execute("SELECT * from fruit_load_list")
 my_data_row = my_cur.fetchone()
-streamlit.text("Hello from Snowflake:")
+streamlit.text("The fruit load list contains")
 streamlit.text(my_data_row)
 
 
