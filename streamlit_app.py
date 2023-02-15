@@ -31,5 +31,5 @@ streamlit.header("Fruityvice Fruit Advice!")
 #streamlit.text(fruityvice_response.json()) - Removed - Show on screen
 streamlit.stop()
 
-    #fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-    fruit_choice = streamlit.text_input('What fruit would you like information about?')
+#fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+fruit_choice = streamlit.text_input('What fruit would you like information about?')
