@@ -32,14 +32,14 @@ try:
     fruit_choice = streamlit.text_input('What fruit would you like information about?')
     
     if not fruit_choice:
-    streamlit.error("Please select a fruit to get information.")
-else:
-    #streamlit.write('The user entered ', fruit_choice)
-    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-    #Take the json version of the response and normalize it
-    fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
-    # output it on the screen as a table
-    streamlit.dataframe(fruityvice_normalized)
+        streamlit.error("Please select a fruit to get information.")
+    else:
+        #streamlit.write('The user entered ', fruit_choice)
+        fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+        #Take the json version of the response and normalize it
+        fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+        # output it on the screen as a table
+        streamlit.dataframe(fruityvice_normalized)
     
 except Urlerror as e:
 streamlist.error()
