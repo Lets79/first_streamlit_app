@@ -42,7 +42,7 @@ try:
         streamlit.dataframe(fruityvice_normalized)
     
 except Urlerror as e:
-streamlist.error()
+    streamlist.error()
 
 
 
