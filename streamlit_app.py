@@ -29,6 +29,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 #import response
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 #streamlit.text(fruityvice_response.json()) - Removed - Show on screen
+streamlit.stop()
 
 
 #try:
@@ -47,7 +48,6 @@ streamlit.header("Fruityvice Fruit Advice!")
 #except Urlerror as e:
 #streamlist.error()
 
-streamlit.stop()
 
 
 
